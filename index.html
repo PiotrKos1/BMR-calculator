@@ -8,10 +8,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@tabler/icons@latest/iconfont/tabler-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="header">
+            <h2>kalkulator bmr</h2>
+        </div>
+        <div class="main-panel">
+            <div class="form-box">
+                <p class="label">Gender:</p>
+                <label for="male">male</label>
+                <input type="radio" id="male" value='1' name="gen">
+                <label for="female">female</label>
+                <input type="radio" id="female" value="2" name="gen">
+                <p class="error-text">error</p>
+            </div>
+            <div class="form-box">
+                <label for="height">Height:</label>
+                <input type="number" id="height">
+                <p class="error-text">error</p>
+            </div>
+            <div class="form-box">
+                <label for="weight">Weight:</label>
+                <input type="number" id="weight">
+                <p class="error-text">error</p>
+            </div>
+            <div class="form-box">
+                <label for="age">Age:</label>
+                <input type="number" id="age">
+                <p class="error-text">error</p>
+            </div>
+            <div class="form-box">
+                <label for="activity">Physical activity:</label>
+                <select id="activity">
+                    <option value="0" disabled selected>-select physical activity level-</option>
+                    <option value="1.2">physical inactivity</option>
+                    <option value="1.4">low physical activity(single workout in week)</option>
+                    <option value="1.6">medium physical activity(several workouts in week)</option>
+                    <option value="1.8">high physical activity(many workouts in week)</option>
+                    <option value="2">very high physical acitivity(professional athlete)</option>
+                </select>
+                <p class="error-text">error</p>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="calculate">calculate</button>
+        </div>
+    </div>
+    <div class="popup">
+        <div class="popup-panel">
+            <p>Your BMR is: <span class="bmr popup-text"> 3000</span></p>
+            <p>If you want keep your weight, you should eat <span class="kcal popup-text">3000</span> calories every day. <i class="ti ti-equal"></i></p>
+            <p>If you want lose your weight, you should eat <span class="deficit popup-text">3000</span> calories every day.<i class="ti ti-arrow-big-down"></i></p> 
+            <p>If you want take on your weight, you should eat <span class="surplus popup-text">3000</span> calories every day.<i class="ti ti-arrow-big-top"></i></p> 
+            <button class="close-popup">close</button>
+            <p>and calculate again!</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

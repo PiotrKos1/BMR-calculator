@@ -1,7 +1,142 @@
-* {box-sizing: border-box;
-margin: 0;
-padding: 0;}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
 body {
-    font-family: 'Montserrat', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: rgba(111, 252, 89, 1);
+	background-image: linear-gradient(
+		214deg,
+		rgba(111, 252, 89, 1) 38%,
+		rgba(94, 138, 94, 1) 100%
+	);
+
+	font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+	width: 500px;
+	height: 600px;
+	background-color: #fff;
+	border: 1px solid grey;
+	box-shadow: 1px 1px 5px 2px;
+}
+
+.hide-wrapper {
+	display: none;
+}
+
+.header {
+	height: 100px;
+	background-color: rgb(19, 202, 50);
+	color: #fff;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 30px;
+}
+
+.main-panel {
+	padding: 20px 100px;
+}
+
+.form-box {
+	padding-bottom: 5px;
+}
+
+.form-box input#height,
+#weight,
+#age,
+select {
+	width: 100%;
+	padding: 5px;
+}
+
+.form-box label {
+	display: inline-block;
+	padding-bottom: 10px;
+	font-size: 18px;
+}
+
+.form-box .label {
+	display: inline;
+	padding: 10px;
+	font-size: 18px;
+}
+
+/* .form-box.error  */
+input.error {
+	border: 1px solid red;
+	background-color: rgb(241, 185, 185);
+}
+
+.error-text {
+	margin-left: 10px;
+	visibility: hidden;
+	color: red;
+}
+
+.error-text.error {
+	visibility: visible;
+}
+
+.btn {
+	padding-top: 10px;
+}
+.calculate {
+	display: block;
+	margin: 0 auto;
+}
+.popup {
+	position: absolute;
+	top: -300px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	height: 500px;
+	text-align: center;
+	background-color: #fff;
+	border: 1px solid grey;
+	box-shadow: 1px 1px 5px 2px;
+}
+
+.popup-panel {
+	padding: 50px;
+	font-size: 18px;
+}
+
+.popup-panel p {
+	padding: 20px 0;
+}
+.popup-text {
+	visibility: hidden;
+	font-weight: bold;
+	color: rgb(19, 202, 50);
+}
+.close-popup,
+.calculate {
+	width: 150px;
+	height: 40px;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #fff;
+	background-color: rgb(19, 202, 50);
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.close-popup:hover,
+.calculate:hover {
+	background-color: rgb(24, 99, 37);
+}
+.show-popup {
+	top: 300px;
 }
