@@ -71,8 +71,7 @@ select {
 	font-size: 18px;
 }
 
-/* .form-box.error  */
-input.error {
+.form-box.error input{
 	border: 1px solid red;
 	background-color: rgb(241, 185, 185);
 }
@@ -83,7 +82,7 @@ input.error {
 	color: red;
 }
 
-.error-text.error {
+.form-box.error .error-text {
 	visibility: visible;
 }
 
