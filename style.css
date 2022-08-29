@@ -59,15 +59,15 @@ select {
 	padding: 5px;
 }
 
-.form-box label {
+
+label {
 	display: inline-block;
 	padding-bottom: 10px;
 	font-size: 18px;
 }
 
-.form-box .label {
+.label {
 	display: inline;
-	padding: 10px;
 	font-size: 18px;
 }
 
@@ -115,7 +115,6 @@ select {
 	padding: 20px 0;
 }
 .popup-text {
-	visibility: hidden;
 	font-weight: bold;
 	color: rgb(19, 202, 50);
 }
