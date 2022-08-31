@@ -78,27 +78,25 @@ const closePopup = () => {
 };
 
 const showScore = () => {
+	const BMR = 66 + 13.7 * weight.value + 5 * height.value - 6.8 * age.value
 	if (
 		male.checked &&
 		height.value >= 1 &&
 		weight.value >= 1 &&
 		age.value >= 1
 	) {
-		bmr.textContent = [
-			66 + 13.7 * weight.value + 5 * height.value - 6.8 * age.value,
-		];
+		bmr.textContent = BMR;
 		kcal.textContent = Math.round(
-			[66 + 13.7 * weight.value + 5 * height.value - 6.8 * age.value] *
+			BMR *
 				activity.value
 		);
 		def.textContent = Math.round(
-			[
-				[66 + 13.7 * weight.value + 5 * height.value - 6.8 * age.value] *
-					activity.value,
-			] - 300
+			
+				(BMR * activity.value)
+			 - 300
 		);
 		surplus.textContent = Math.round(
-			(66 + 13.7 * weight.value + 5 * height.value - 6.8 * age.value) *
+			BMR *
 				activity.value +
 				300
 		);
@@ -108,21 +106,19 @@ const showScore = () => {
 		weight.value >= 1 &&
 		age.value >= 1
 	) {
-		bmr.textContent = [
-			665 + 9.6 * weight.value + 1.8 * height.value - 4.7 * age.value,
-		];
+		bmr.textContent = BMR;
 		kcal.textContent = Math.round(
-			[665 + 9.6 * weight.value + 1.8 * height.value - 4.7 * age.value] *
+			BMR *
 				activity.value
 		);
 		def.textContent = Math.round(
 			[
-				[665 + 9.6 * weight.value + 1.8 * height.value - 4.7 * age.value] *
-					activity.value,
+				BMR *
+					activity.value
 			] - 300
 		);
 		surplus.textContent = Math.round(
-			(665 + 9.6 * weight.value + 1.8 * height.value - 4.7 * age.value) *
+			(BMR) *
 				activity.value +
 				300
 		);
